@@ -1,0 +1,71 @@
+{% load static %}
+
+
+{% block style %}
+<link href="{% static 'finearts/css/style_toppings.css' %}" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+{% endblock style %}
+
+{% block navbar %}
+<nav class="navbar navbar-expand-lg mx-auto" id="mainNav">
+  <div class="container-fluid justify-content-center wrapper" id="mainNavBar">
+    <form class="wrapper" action="{% url 'search_results' %}" method="get">
+      <ul class="nav navbar-nav w-100 flex-nowrap">
+        <li class="nav-item text-black">
+          <button type="submit" class="btn btn-primary nav-link"
+                  id="charcoal" name="q" type="text" value="0">
+          <label class="btn-text" for="charcoal">CharCoal</label>
+          </button>
+        </li>
+        <li class="nav-item text-black">
+          <button type="submit" class="btn btn-primary nav-link"
+                  id="photoshop" name="q" type="text" value="1">
+          <label class="btn-text" for="photoshop">Photoshop</label>
+          </button>
+        </li>
+        <li class="nav-item text-black">
+          <button type="submit" class="btn btn-primary nav-link"
+                  id="painting" name="q" type="text" value="2">
+          <label class="btn-text" for="painting">Painting</label>
+          </button>
+        </li>
+        <li class="nav-item text-black">
+          <button type="submit" class="btn btn-primary nav-link"
+                  id="sketching" name="q" type="text" value="4">
+          <label class="btn-text" for="sketching">Sketching</label>
+          </button>
+        </li>
+        <li class="nav-item text-black">
+          <button type="submit" class="btn btn-primary nav-link"
+                  id="illustrator" name="q" type="text" value="5">
+          <label class="btn-text" for="illustrator">Illustrator</label>
+          </button>
+        </li>
+        <li class="nav-item text-black">
+          <button type="submit" class="btn btn-primary nav-link"
+                  id="pet_portraits" name="q" type="text" value="6">
+          <label class="btn-text" for="pet_portraits">Pet Portraits</label>
+          </button>
+        </li>
+      </ul>
+    </form>
+  </div>
+</nav>
+{% endblock navbar %}
+
+{% block sidenote %}
+
+<!-- Sidebar Widgets Column -->
+<div class="sidenote col-md-4 float-right ">
+  <div class="card my-4">
+    <h5 class="card-header">About Me</h5>
+    <div class="card-body">
+      <p class="card-text">I like to draw both things and stuff.</p>
+      <a href="{% url 'contact' %}"
+        class="btn btn-danger">Really?? Fascinating, I'll HYU</a>
+    </div>
+  </div>
+</div>
+
+{% endblock sidenote %}
+
