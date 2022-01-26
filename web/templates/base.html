@@ -1,0 +1,40 @@
+{% load static %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% bootstrap_messages %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Misha John</title>
+    {% block style %}
+    {% endblock style %}
+    <link href="{% static 'finearts/css/style_base.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="{% static 'thumbnails/favicon.ico' %}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{% static 'thumbnails/apple-touch-icon.png' %}">
+    <link rel="apple-touch-icon-precomposed" href="{% static 'thumbnails/apple-touch-icon.png' %}">
+    <meta name="google" content="notranslate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="stretch-fit">
+
+      </div>
+    </div>
+    {% include 'toppingsnsides.html' %}
+    {% block navbar %} {% endblock navbar %}
+    {% block sidenote %} {% endblock sidenote %}
+    {% block content %}
+    <!-- Content Goes here -->
+    {% endblock content %}
+    <!-- Footer -->
+    <!-- <footer class="py-3 bg-grey">
+        <p class="m-0 text-dark text-center ">Copyright &copy; Jonlolol</p>
+    </footer> -->
+  </body>
+</html>
