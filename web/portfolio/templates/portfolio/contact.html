@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block style %}
+  <link href="{% static 'portfolio/css/style_contact.css' %}" rel="stylesheet" media="screen">
+  <title>Contact Page</title>
+{% endblock style %}
+
+{% block content %}
+<div class="page-content">
+  <div class="email-form">
+    <form class="submission" action = "." method="post">
+      {% csrf_token %}
+    <div class="form-container">
+      {{ form|crispy }}
+    </div>
+    <div class="form-container">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    </form>
+  </div>
+</div>
+{% endblock content %}

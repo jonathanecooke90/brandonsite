@@ -1,0 +1,25 @@
+/* CSS goes here! */
+
+
+
+/* Media queries for various screen sizes go here! */
+@media screen and (max-width:1920px) {
+ 
+}
+
+@media screen and (orientation:portrait), (max-width:1920px) {
+
+}
+
+@media screen and (max-width:1200px) {
+
+}
+
+@media screen and (max-width:1000px) {
+
+}
+
+/* Tiny screens + phone users who aren't landscape weirdos */
+@media screen and (orientation:portrait), (max-width:800px) {
+
+}
